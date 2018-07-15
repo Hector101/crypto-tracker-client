@@ -19,7 +19,6 @@ class LoginComponent extends React.Component {
   }
 
   handleLogin = () => {
-    console.log(this.state)
     axios.post('http://localhost:8000/login', this.state)
       .then((user) =>{
         console.log(user, 'user')
