@@ -21,7 +21,6 @@ class LoginComponent extends React.Component {
   handleLogin = () => {
     axios.post('http://localhost:8000/login', this.state)
       .then((user) =>{
-        console.log(user, 'user')
         localStorage.setItem('token', user.token);
         this.props.history.push('/dashboard');
       });
